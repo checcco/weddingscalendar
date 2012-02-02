@@ -1,8 +1,9 @@
 <?php echo $this->Html->link(__('Elimina'), "#", array('class'=>'nice small radius red button', 'data-reveal-id'=>'myModal'.$id, 'data-dismiss-modal-class'=>'closemodal')); ?>
 <div id="myModal<?php echo $id;?>" class="reveal-modal">
-     <p>Awesome. I have it.</p>
-     <p class="lead">Your couch.  It's mine.</p>
-     <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+     <p>Beppe, confermi eliminazione?</p>
+     <p class="lead">Se confermi non potrai tornare indietro!!!!</p>
+     <p>Io ti ho avvisato...</p>
+     <?php echo $this->Html->link(__('Non eliminare'), "#", array('class'=>'closemodal nice large radius green button')); ?>
      <?php echo $this->Form->postLink(__('Elimina'), array('action' => 'delete', $id), array('class'=>'nice small radius red button')); ?>
      <?php echo $this->Html->link(__('Non eliminare'), "#", array('class'=>'closemodal nice large radius blue button')); ?>
 </div>
