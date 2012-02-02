@@ -1,0 +1,10 @@
+/app/Config
+/app/tmp
+/app/Vendor
+/lib
+/plugins
+/vendors
+.DS_Store
+.htaccess
+tags
+git-ftp.py
