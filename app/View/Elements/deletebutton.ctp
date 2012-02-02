@@ -1,4 +1,4 @@
-<?php echo $this->Html->link(__('Elimina'), "#", array('class'=>'nice small radius red button', 'data-reveal-id'=>'myModal'.$id, 'data-dismissmodalclass'=>'closemodal')); ?>
+<?php echo $this->Html->link(__('Elimina'), "#", array('class'=>'nice small radius red button', 'data-reveal-id'=>'myModal'.$id, 'data-dismiss-modal-class'=>'closemodal')); ?>
 <div id="myModal<?php echo $id;?>" class="reveal-modal">
      <p>Awesome. I have it.</p>
      <p class="lead">Your couch.  It's mine.</p>
