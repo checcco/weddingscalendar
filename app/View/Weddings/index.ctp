@@ -7,7 +7,8 @@
             <div>
                 <?php echo $this->Html->link(__('Dettagli'), array('action' => 'view', $wedding['Wedding']['id']), array('class'=>'nice small radius blue button')); ?>
                 <?php echo $this->Html->link(__('Modifica'), array('action' => 'edit', $wedding['Wedding']['id']), array('class'=>'nice small radius blue button')); ?>
-                <?php echo $this->Form->postLink(__('Elimina'), array('action' => 'delete', $wedding['Wedding']['id']), array('class'=>'nice small radius red button'), __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $wedding['Wedding']['id'])); ?>
+                <!--<?php echo $this->Form->postLink(__('Elimina'), array('action' => 'delete', $wedding['Wedding']['id']), array('class'=>'nice small radius red button'), __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $wedding['Wedding']['id'])); ?>-->
+                <?php echo $this->element('deletebutton', array('id'=>$wedding['Wedding']['id']));?>
             </div>
         </div>
 <?php endforeach; ?>

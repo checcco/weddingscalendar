@@ -57,7 +57,8 @@
         </div>
         <div class="row">
 			<?php echo $this->Html->link(__('Modifica'), array('action' => 'edit', $wedding['Wedding']['id']), array('class'=>'nice small radius blue button')); ?>
-			<?php echo $this->Form->postLink(__('Elimina'), array('action' => 'delete', $wedding['Wedding']['id']), array('class'=>'nice small radius red button'), __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $wedding['Wedding']['id'])); ?>
+			<!--<?php echo $this->Form->postLink(__('Elimina'), array('action' => 'delete', $wedding['Wedding']['id']), array('class'=>'nice small radius red button'), __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $wedding['Wedding']['id'])); ?>-->
+            <?php echo $this->element('deletebutton', array('id'=>$wedding['Wedding']['id']));?>
         </div>
     </div>
 </div>
@@ -65,7 +66,8 @@
 	<h3><?php echo __('Azioni'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Modifica questo matrimonio'), array('action' => 'edit', $wedding['Wedding']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Cancella questo matrimonio'), array('action' => 'delete', $wedding['Wedding']['id']), null, __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $wedding['Wedding']['id'])); ?> </li>
+		<!--<li><?php echo $this->Form->postLink(__('Cancella questo matrimonio'), array('action' => 'delete', $wedding['Wedding']['id']), null, __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $wedding['Wedding']['id'])); ?> </li>-->
+        <li><?php echo $this->element('deletelink', array('id'=>$wedding['Wedding']['id'], 'text'=>'Elimina questo matrimonio'));?></li>
 		<li><?php echo $this->Html->link(__('Elenco dei matrimoni'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Crea un nuovo matrimonio'), array('action' => 'add')); ?> </li>
         <li><hr /></li>

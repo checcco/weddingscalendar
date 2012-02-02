@@ -5,7 +5,8 @@
 	<h3><?php echo __('Azioni'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Cancella questo matrimonio'), array('action' => 'delete', $this->Form->value('Wedding.id')), null, __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $this->Form->value('Wedding.id'))); ?></li>
+		<!--<li><?php echo $this->Form->postLink(__('Cancella questo matrimonio'), array('action' => 'delete', $this->Form->value('Wedding.id')), null, __('Sei sicuro di voler eliminare questo matrimonio? (#%s)', $this->Form->value('Wedding.id'))); ?></li>-->
+        <li><?php echo $this->element('deletelink', array('id'=>$this->Form->value('Wedding.id'), 'text'=>'Elimina questo matrimonio'));?></li>
 		<li><?php echo $this->Html->link(__('Elenco dei matrimoni'), array('action' => 'index'));?></li>
         <li><hr /></li>
 		<li><?php echo $this->Html->link(__('Elenco delle comparse'), array('controller' => 'players', 'action' => 'index')); ?> </li>
