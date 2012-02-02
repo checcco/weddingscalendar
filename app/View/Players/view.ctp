@@ -8,7 +8,6 @@
             foreach ($player['Wedding'] as $wedding): ?>
             	<div class="panel">
 					<?php echo $this->element('weddingheader', array('wedding'=>$wedding));?>
-                    <?php //debug($wedding);?>
                 </div>
         <?php endforeach; ?>
     <?php } else { ?>
