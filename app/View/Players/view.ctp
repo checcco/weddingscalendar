@@ -19,7 +19,7 @@
 	<h3><?php echo __('Azioni'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Modifica questa comparsa'), array('action' => 'edit', $player['Player']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Cancella questa comparsa'), array('action' => 'delete', $player['Player']['id']), null, __('Sei sicuro di voler eliminare questa comparsa? (#%s)', $player['Player']['id'])); ?> </li>
+		<li><?php echo $this->element('deletelink', array('id'=>$player['Player']['id'], 'text'=>'Elimina questa comparsa'));?></li>
 		<li><?php echo $this->Html->link(__('Elenco delle comparse'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Crea una nuova comparsa'), array('action' => 'add')); ?> </li>
         <li><hr /></li>

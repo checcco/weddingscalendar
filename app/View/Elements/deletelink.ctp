@@ -1,4 +1,4 @@
-<?php echo $this->Html->link(__('Elimina'), "#", array('class'=>'nice small radius red button', 'data-reveal-id'=>'myModal'.$id, 'data-dismiss-modal-class'=>'closemodal')); ?>
+<?php echo $this->Html->link($text, "#", array('data-reveal-id'=>'myModal'.$id, 'data-dismiss-modal-class'=>'closemodal')); ?>
 <div id="myModal<?php echo $id;?>" class="reveal-modal">
      <h2>Beppe, confermi eliminazione?</h2>
      <p class="lead">Se confermi non potrai tornare indietro!!!!</p>

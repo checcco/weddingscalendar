@@ -11,7 +11,6 @@
             	<?php echo $this->Html->link(__('Dettagli'), array('action' => 'view', $player['Player']['id']), array('class'=>'nice small radius blue button')); ?>
 				<?php echo $this->Html->link(__('Modifica'), array('action' => 'edit', $player['Player']['id']), array('class'=>'nice small radius blue button')); ?>
                 <?php echo $this->element('deletebutton', array('id'=>$player['Player']['id']));?>
-
             </div>
         </div>
     </div>
