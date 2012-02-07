@@ -1,4 +1,4 @@
-<?php echo $this->Form->create('Wedding', array('class'=>'nice custom', 'inputDefaults' => array('class' => 'input-text','div' => false, 'timeFormat'=>'24', 'dateFormat'=>'DMY', 'interval'=>15, 'minYear'=>2012, 'maxYear'=>2018)));?>
+<?php echo $this->Form->create('Wedding', array('class'=>'nice custom', 'inputDefaults' => array('class' => 'input-text','div' => false, 'timeFormat'=>'24', 'dateFormat'=>'DMY', 'interval'=>15, 'minYear'=>2011, 'maxYear'=>2018)));?>
 	
 		<h2><?php echo $title; ?></h2>
 	<?php
