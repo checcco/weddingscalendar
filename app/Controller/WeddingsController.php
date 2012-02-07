@@ -176,6 +176,10 @@ class WeddingsController extends AppController {
 		$end = new EventDateTime();
 		$end->setDateTime($newDetails['endTime']);
 		$event->setEnd($end);
+		$attendee1 = new EventAttendee();
+		$attendee1->setEmail('ezzi80@gmail.com');
+		$attendees = array($attendee1);
+		$event->attendees = $attendees;
 		return $event;
 	}
 	
