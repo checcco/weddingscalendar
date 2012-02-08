@@ -25,7 +25,7 @@ class WeddingsController extends AppController {
 				exit();
 			}*/
 			$client->authenticate();
-			$this->Session->write('googletoken', $client->getAccessToken());
+			$this->Session->write('googletoken', $client->getAccessToken());			
 		}
 		
 		parent::beforeFilter();
@@ -91,8 +91,12 @@ class WeddingsController extends AppController {
 			throw new NotFoundException(__('Invalid wedding'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			//debug($this->request->data);exit();
-			$this->updateEvent($this->request->data);
+			if ($this->request->data['Wedding']['evid']) {
+				$this->updateEvent($this->request->data);
+			} else {
+				$evid = $this->addEvent($this->request->data);
+				$this->request->data['Wedding']['evid'] = $evid;
+			}
 			if ($this->Wedding->save($this->request->data)) {
 				$this->Session->setFlash(__('Il matrimonio è stato aggiornato!'), 'default', array('class'=>'alert-box success'));
 				$this->redirect(array('action' => 'index'));
