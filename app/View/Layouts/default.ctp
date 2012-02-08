@@ -46,6 +46,10 @@
         <div class="row">
             <?php echo $content_for_layout; ?>
         </div>
+        <div class="row">
+            <hr />
+            <center>:)</center>
+        </div>
 
 	</div>
 	<!-- container -->
