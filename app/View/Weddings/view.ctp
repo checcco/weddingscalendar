@@ -36,6 +36,10 @@
         	Data demo-live: <?php echo $this->Time->Format('j F Y',$wedding['Wedding']['datademolive']); ?>, ore <b><?php echo $this->Time->Format('H:i',$wedding['Wedding']['datademolive']); ?></b><br />
             Data contratto: <?php echo $this->Time->Format('j F Y',$wedding['Wedding']['datacontratto']); ?>
         </div>
+        <div class="row" style="margin-bottom:20px">
+            <h6>Note</h6>
+            <?php echo h($wedding['Wedding']['notes']); ?>
+        </div>
         <div class="row" style="margin-bottom:20px;">
         	<h4>Comparse convocate</h4>
             <?php if (!empty($wedding['Player'])) {?>

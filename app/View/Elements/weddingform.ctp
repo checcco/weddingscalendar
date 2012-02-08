@@ -38,7 +38,8 @@
 		echo $this->Form->input('saldo', array('label'=>'Saldo'));
 		echo $this->Form->input('acconto', array('label'=>'Acconto'));
 		echo $this->Form->input('datademolive', array('label'=>'Data per il demo-live'));
-		echo $this->Form->input('datacontratto', array('label'=>'Data del contratto'));?>
+		echo $this->Form->input('datacontratto', array('label'=>'Data del contratto'));
+        echo $this->Form->input('notes', array('label'=>'Note'));?>
     </fieldset>
     <fieldset id="fieldsetComparse">
     	<legend>Comparse</legend>
